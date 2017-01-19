@@ -10,6 +10,18 @@ class System
     @bodies.push(body)
   end
 
+  def total_mass
+
+    total_mass = 0
+
+    bodies.each do |body|
+      total_mass += body.mass
+    end
+
+    return total_mass
+
+  end
+
 end
 
 class Body
@@ -54,8 +66,9 @@ class Moon < Body
 
   def initialize(name, mass, month, planet)
     super(name, mass)
-    @planet = planet
     @month = month
+    @planet = planet
+
   end
 
 end
@@ -63,9 +76,12 @@ end
 ###############################
 
 solar = System.new
-earth = Planet.new("Earth", 5.972, 24, 365)
 
-puts earth.name
-puts earth.mass
-puts earth.day
-puts earth.year
+sun = Star.new("Sun", 332946.05, "G-type")
+earth = Planet.new("Earth", 1, 24, 365)
+moon = Moon.new("Moon", 0.0123, 27, earth.name)
+
+solar.add(sun)
+solar.add(earth)
+solar.add(moon)
+puts solar.total_mass
