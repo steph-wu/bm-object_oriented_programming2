@@ -27,3 +27,11 @@ class Instructor < Person
   end
 
 end
+
+#########################################
+
+chris = Instructor.new("Chris")
+chris.greeting
+
+cristina = Student.new("Cristina")
+cristina.greeting
