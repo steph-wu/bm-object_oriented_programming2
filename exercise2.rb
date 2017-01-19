@@ -73,15 +73,24 @@ class Moon < Body
 
 end
 
-###############################
+# Here's our solar system
 
 solar = System.new
+
+# Here are some bodies in the solar system
 
 sun = Star.new("Sun", 332946.05, "G-type")
 earth = Planet.new("Earth", 1, 24, 365)
 moon = Moon.new("Moon", 0.0123, 27, earth.name)
+mars = Planet.new("Mars", 0.107, 24.6, 687)
+mercury = Planet.new("Mercury", 0.0553, 1407.5, 88)
+venus = Planet.new("Venus", 0.815, 2802, 225)
+
+# Adding bodies
 
 solar.add(sun)
 solar.add(earth)
 solar.add(moon)
-puts solar.total_mass
+solar.add(mars)
+solar.add(mercury)
+solar.add(venus)
