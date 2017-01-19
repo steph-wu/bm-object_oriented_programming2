@@ -38,3 +38,8 @@ cristina.greeting
 
 chris.teach
 cristina.learn
+
+chris.learn # undefined method 'learn'
+cristina.teach # undefined method 'teach'
+
+# This fails because we are attempting to call a method that is not defined in the class to which the instance belongs.
