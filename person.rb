@@ -23,7 +23,7 @@ end
 class Instructor < Person
 
   def teach
-    "Everything in Ruby is an Object"
+    puts "Everything in Ruby is an Object"
   end
 
 end
@@ -35,3 +35,6 @@ chris.greeting
 
 cristina = Student.new("Cristina")
 cristina.greeting
+
+chris.teach
+cristina.learn
